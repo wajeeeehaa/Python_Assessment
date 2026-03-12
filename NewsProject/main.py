@@ -32,7 +32,7 @@ def main():
 
     num_to_display = min(num_articles, len(processed_articles))
 
-    # Task 13: Display Report (utilizing enumerate and zip as required by Task 10)
+    # Task 13: Display Report 
     print("\nTop News Articles")
     print("-----------------")
     for i, article in enumerate(processed_articles[:num_to_display], 1):
@@ -46,12 +46,12 @@ def main():
                 print(f"   {val}")
 
     # Task 6: Create Source Summary
+    # for better visualization 
     print("\n" + "=" * 40)
     print("Source Summary")
     print("=" * 40)
     summary = get_source_summary(processed_articles)
 
-    # Required to use keys(), values(), and items()
     print("Sources monitored (keys):", list(summary.keys()))
     print("Article counts (values):", list(summary.values()))
     print("\nDetailed breakdown (items):")
@@ -65,7 +65,7 @@ def main():
     for recent in recent_articles_generator(processed_articles):
         print(f"- {recent.title}")
 
-    # Bonus: Save to JSON
+    # bonus task
     print("\n" + "=" * 40)
     save_to_json(processed_articles)
 
