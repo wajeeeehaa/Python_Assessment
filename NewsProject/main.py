@@ -47,9 +47,9 @@ def main():
 
     # Task 6: Create Source Summary
     # for better visualization 
-    print("\n" + "=" * 40)
+    print("\n" )
     print("Source Summary")
-    print("=" * 40)
+    print("\n")
     summary = get_source_summary(processed_articles)
 
     print("Sources monitored (keys):", list(summary.keys()))
@@ -59,14 +59,14 @@ def main():
         print(f"{source}: {count}")
 
     # Task 7: Generator Function
-    print("\n" + "=" * 40)
+    print("\n")
     print("Recent Articles Generator")
-    print("=" * 40)
+    # print("\n")
     for recent in recent_articles_generator(processed_articles):
         print(f"- {recent.title}")
 
     # bonus task
-    print("\n" + "=" * 40)
+    print("\n")
     save_to_json(processed_articles)
 
 
