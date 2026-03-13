@@ -18,7 +18,6 @@ def main():
         print("No articles with authors found after processing.")
         return
 
-    # Task 12: User Input
     while True:
         try:
             num = input("\nHow many articles would you like to display? ")
@@ -32,7 +31,6 @@ def main():
 
     num_to_display = min(num_articles, len(processed_articles))
 
-    # Task 13: Display Report 
     print("\nTop News Articles")
     print("-----------------")
     for i, article in enumerate(processed_articles[:num_to_display], 1):
@@ -45,7 +43,7 @@ def main():
             else:
                 print(f"   {val}")
 
-    # Task 6: Create Source Summary
+    #  Source Summary
     # for better visualization 
     print("\n" )
     print("Source Summary")
@@ -58,10 +56,9 @@ def main():
     for source, count in summary.items():
         print(f"{source}: {count}")
 
-    # Task 7: Generator Function
+    #  Generator Function
     print("\n")
     print("Recent Articles Generator")
-    # print("\n")
     for recent in recent_articles_generator(processed_articles):
         print(f"- {recent.title}")
 
